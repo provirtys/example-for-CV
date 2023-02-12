@@ -1,0 +1,38 @@
+.resources-modal {
+
+  &__content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 59px;
+
+    @include mobile{
+      padding: 0 20px;
+    }
+
+    &--loading {
+      @include loader(100);
+      min-height: 300px;
+      height: auto;
+    }
+  }
+
+  &__title {
+    max-width: 200px;
+    margin: 0 0 9px;
+  }
+
+  &__number {
+    margin-bottom: 30px;
+  }
+
+  .input {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 15px 59px;
+    max-width: 201px;
+  }
+}

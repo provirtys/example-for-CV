@@ -1,0 +1,88 @@
+.resources-diagram {
+  margin-top: 21px;
+  padding: 0 30px 20px;
+
+  @include mobile {
+    padding: 0;
+  }
+
+  &--loading {
+    @include loader(100);
+    min-height: 372px;
+    height: auto;
+  }
+
+  &__diagram {
+    width: 100%;
+    height: 250px;
+    overflow-x: scroll;
+
+    @include hideScroll;
+
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+
+  &__settings {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    gap: 50px;
+
+    @include mobile {
+      flex-direction: column;
+      max-height: 150px;
+      flex-wrap: wrap;
+      gap: 9px;
+      max-width: 290px;
+    }
+  }
+
+  &__rate {
+
+    &-checkbox {
+      margin-right: 8px;
+    }
+
+    &:first-child {
+
+      @include mobile {
+        max-width: 100px
+      }
+    }
+
+    &-label {
+      @include font(13px, 16px, 600);
+    }
+  }
+
+  &__rate {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__subrate {
+    @include font(12px, 15px, 400);
+  }
+}
+
+:global(.checkbox) {
+  margin-right: 8px;
+}
+
+:global(.resources-diagram .checkbox .checkbox__checkmark) {
+  width: 15px;
+  height: 15px;
+  padding: 3.5px;
+}

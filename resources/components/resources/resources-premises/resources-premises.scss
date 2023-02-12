@@ -1,0 +1,10 @@
+.resources__premises--loading {
+
+  @include loader(100);
+  min-height: 300px;
+  height: auto;
+}
+
+.filter-list {
+  margin-bottom: 30px;
+}
